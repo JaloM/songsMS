@@ -1,0 +1,23 @@
+server:
+  port: 9093
+
+spring:
+  application:
+    name: user-service
+
+spring.jpa.properties.hibernate.physical_naming_strategy:
+  org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+jwt:
+    secret: Zu45kuOu0kfbwrKwUOdNqwp3pb7ARo0oK2mJ3oppDHe02j6OTbHjsueGePol
+    expiration: 72000
